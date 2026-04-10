@@ -178,7 +178,7 @@
         <div class="absolute inset-0 hero-gradient"></div>
         
         <div class="relative z-10 text-center px-6 max-w-4xl" data-aos="zoom-out" data-aos-duration="1500">
-            <div class="mb-6 inline-block py-1 px-4 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-bold tracking-[0.2em] uppercase">
+            <div class="mb-8 inline-block py-1.5 px-5 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-bold tracking-[0.2em] uppercase">
                 Now Live • 2026
             </div>
             <h1 class="text-5xl md:text-8xl font-extrabold mb-4 tracking-tight leading-none">
@@ -186,7 +186,8 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-green neon-text-blue">Premier League</span>
             </h1>
             <p class="text-xl md:text-2xl font-light text-gray-400 mb-8 max-w-2xl mx-auto">
-                The ultimate arena where innovation, strategy, and sportsmanship collide. One League. Two Cities.
+                The ultimate arena where innovation, strategy, and sportsmanship collide. <br>
+                <span class="text-white font-bold">Two Cities. Two Leagues.</span>
             </p>
 
             <!-- City Switcher -->
@@ -323,7 +324,8 @@
             </div>
 
             <!-- MUMBAI CAPTAINS CONTENT -->
-            <div id="mumbai-captains" class="city-content city-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- MUMBAI CAPTAINS CONTENT -->
+            <div id="mumbai-captains" class="city-content city-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto justify-items-center">
                 <!-- Mumbai Captain 1: RW Mavericks -->
                 <div class="captain-card glass p-8 text-center">
                     <div class="relative w-32 h-32 mx-auto mb-6">
@@ -557,7 +559,8 @@
             </div>
 
             <!-- MUMBAI ROSTERS CONTENT -->
-            <div id="mumbai-rosters" class="city-content city-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- MUMBAI ROSTERS CONTENT -->
+            <div id="mumbai-rosters" class="city-content city-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto justify-center">
                 <!-- RW Mavericks Roster -->
                 <div class="glass p-8 border-t-4 border-brand-green flex flex-col h-full">
                     <h5 class="text-xl font-bold mb-6 text-brand-green uppercase tracking-widest">RW Mavericks</h5>
@@ -624,12 +627,40 @@
                     <div class="mt-8 pt-4 border-t border-white/10 text-center">
                         <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Purse Remaining</div>
                         <div class="text-xl font-black text-brand-green">3,600 / 12,000</div>
-                    </div>
-                </div>
-            </div>v>
+            </div>
+        </div>
+    </section>
 
-            <!-- Co-ordinators -->
-            <div class="mt-20 flex flex-col md:flex-row justify-center items-center gap-12 noida-only" data-aos="fade-up">
+    <!-- LEAGUE STATS BAR (STANDALONE & PERSISTENT) -->
+    <section id="league-stats" class="py-12 px-6 relative bg-[#0a0a0c]">
+        <div class="container mx-auto max-w-6xl">
+            <div class="glass p-6 md:p-10 flex flex-wrap justify-around items-center gap-8 border-brand-blue/20" data-aos="zoom-in">
+                <div class="text-center">
+                    <div id="stat-teams" class="text-4xl font-extrabold text-brand-blue">04</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Teams</div>
+                </div>
+                <div class="h-10 w-px bg-white/10 hidden md:block"></div>
+                <div class="text-center">
+                    <div id="stat-players" class="text-4xl font-extrabold text-white">29</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Players</div>
+                </div>
+                <div class="h-10 w-px bg-white/10 hidden md:block noida-only"></div>
+                <div class="text-center noida-only">
+                    <div class="text-4xl font-extrabold text-brand-blue">03</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Coordinators</div>
+                </div>
+                <div class="h-10 w-px bg-white/10 hidden md:block noida-only"></div>
+                <div class="text-center noida-only">
+                    <div class="text-4xl font-extrabold text-brand-green">01</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Champion</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coordinators" class="py-24 px-6 border-t border-white/5 noida-only">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12" data-aos="fade-up">
                 <div class="text-center">
                     <h6 class="text-gray-500 uppercase tracking-widest text-xs font-bold mb-4">League Co-ordinator</h6>
                     <p class="text-2xl font-black text-brand-blue">Nandini</p>
@@ -709,28 +740,7 @@
                 </div>
             </div>
 
-            <!-- Stats Bar -->
-            <div class="mt-12 glass p-6 md:p-10 flex flex-wrap justify-around items-center gap-8 border-brand-blue/20" data-aos="zoom-in">
-                <div class="text-center">
-                    <div id="stat-teams" class="text-4xl font-extrabold text-brand-blue">04</div>
-                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Teams</div>
-                </div>
-                <div class="h-10 w-px bg-white/10 hidden md:block"></div>
-                <div class="text-center">
-                    <div id="stat-players" class="text-4xl font-extrabold text-white">29</div>
-                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Players</div>
-                </div>
-                <div class="h-10 w-px bg-white/10 hidden md:block"></div>
-                <div class="text-center">
-                    <div class="text-4xl font-extrabold text-brand-blue">03</div>
-                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Coordinators</div>
-                </div>
-                <div class="h-10 w-px bg-white/10 hidden md:block"></div>
-                <div class="text-center">
-                    <div class="text-4xl font-extrabold text-brand-green">01</div>
-                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Champion</div>
-                </div>
-            </div>
+            <!-- Details were here -->
         </div>
     </section>
 
