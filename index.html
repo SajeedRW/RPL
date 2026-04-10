@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -140,46 +140,6 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #00d2ff;
         }
-
-        /* Location switcher */
-        .location-select {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(0,210,255,0.3);
-            color: #00d2ff;
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            padding: 0.4rem 0.9rem;
-            border-radius: 9999px;
-            cursor: pointer;
-            outline: none;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2300d2ff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 0.75rem center;
-            padding-right: 2rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .location-select:hover, .location-select:focus {
-            border-color: rgba(57,255,20,0.5);
-            box-shadow: 0 0 10px rgba(0,210,255,0.2);
-        }
-        .location-select option {
-            background: #0a0a0c;
-            color: #fff;
-        }
-
-        /* Fade transition */
-        .section-fade {
-            transition: opacity 0.35s ease, transform 0.35s ease;
-        }
-        .section-fade.fading {
-            opacity: 0;
-            transform: translateY(8px);
-        }
     </style>
 </head>
 <body class="custom-scrollbar">
@@ -190,16 +150,10 @@
             <img src="rpl_logo.png" alt="RPL Logo" class="h-10 w-auto">
             <span class="text-xl font-extrabold tracking-tighter neon-text-blue hidden sm:block">RPL SEASON 1</span>
         </div>
-        <div class="flex items-center gap-4 md:gap-6">
-            <div class="hidden md:flex gap-6 text-sm font-medium uppercase tracking-widest">
-                <a href="#hero" class="hover:text-brand-blue transition-colors">Home</a>
-                <a href="#captains" class="hover:text-brand-green transition-colors">Captains</a>
-                <a href="#details" class="hover:text-brand-blue transition-colors">Event</a>
-            </div>
-            <select id="locationSelect" class="location-select" aria-label="Select Location">
-                <option value="noida">📍 Noida</option>
-                <option value="mumbai">📍 Mumbai</option>
-            </select>
+        <div class="flex gap-6 text-sm font-medium uppercase tracking-widest">
+            <a href="#hero" class="hover:text-brand-blue transition-colors">Home</a>
+            <a href="#captains" class="hover:text-brand-green transition-colors">Captains</a>
+            <a href="#details" class="hover:text-brand-blue transition-colors">Event</a>
         </div>
     </nav>
 
@@ -216,10 +170,9 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-green neon-text-blue">Premier League</span>
             </h1>
             <p class="text-xl md:text-2xl font-light text-gray-400 mb-8 max-w-2xl mx-auto">
-                <span class="text-white font-semibold" id="heroSubtitle">Noida Office Turf Cricket League</span><br>
+                <span class="text-white font-semibold">Noida Office Turf Cricket League</span><br>
                 Where Innovation Meets the Pitch
             </p>
-            <div id="editionBadge" class="inline-block mt-2 mb-2 py-1 px-4 rounded-full border border-brand-green/40 bg-brand-green/10 text-brand-green text-xs font-bold tracking-[0.2em] uppercase">Noida Edition</div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#captains" class="px-8 py-4 bg-gradient-to-r from-brand-blue to-brand-green text-black font-bold rounded-xl hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(0,210,255,0.4)] uppercase">
                     Meet the Captains
@@ -267,10 +220,84 @@
                 </div>
                 <div class="h-1 lg:w-1/3 bg-gradient-to-r from-brand-blue to-transparent rounded-full mb-4 hidden md:block"></div>
             </div>
-            <div id="captainsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 section-fade"></div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Captain 1: RW Champions -->
+                <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative w-32 h-32 mx-auto mb-6">
+                        <div class="absolute inset-0 rounded-full border-2 border-brand-blue border-dashed animate-[spin_10s_linear_infinite]"></div>
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-dark overflow-hidden p-1">
+                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">PN</div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-brand-blue text-black p-2 rounded-full shadow-lg">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-1">Pankaj Negi</h4>
+                    <p class="text-brand-blue text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
+                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-blue/80 font-bold uppercase tracking-widest">
+                        "RW Champions"
+                    </div>
+                </div>
+
+                <!-- Captain 2: Qube Super Kings -->
+                <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative w-32 h-32 mx-auto mb-6">
+                        <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_10s_linear_infinite]"></div>
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
+                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">AT</div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-brand-green text-black p-2 rounded-full shadow-lg">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-1">Ayush Nath Tiwari</h4>
+                    <p class="text-brand-green text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
+                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-green/80 font-bold uppercase tracking-widest">
+                        "Qube Super Kings"
+                    </div>
+                </div>
+
+                <!-- Captain 3: Ball Destroyers -->
+                <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative w-32 h-32 mx-auto mb-6">
+                        <div class="absolute inset-0 rounded-full border-2 border-brand-blue border-dashed animate-[spin_15s_linear_infinite]"></div>
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-dark overflow-hidden p-1">
+                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">YJ</div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-brand-blue text-black p-2 rounded-full shadow-lg">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-1">Yashraj Jaiswal</h4>
+                    <p class="text-brand-blue text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
+                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-blue/80 font-bold uppercase tracking-widest">
+                        "Ball Destroyers"
+                    </div>
+                </div>
+
+                <!-- Captain 4: WFH Warriors -->
+                <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative w-32 h-32 mx-auto mb-6">
+                        <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_15s_linear_infinite]"></div>
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
+                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">SJ</div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-brand-green text-black p-2 rounded-full shadow-lg">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-1">Shubham Jha</h4>
+                    <p class="text-brand-green text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
+                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-green/80 font-bold uppercase tracking-widest">
+                        "WFH Warriors"
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- EVENT DETAILS SECTION -->
     <!-- TEAM ROSTERS SECTION -->
     <section id="rosters" class="py-24 px-6 bg-[#0a0a0c] relative">
         <div class="container mx-auto max-w-6xl">
@@ -278,13 +305,193 @@
                 <h2 class="text-4xl font-black mb-4">Team <span class="text-brand-green">Rosters</span></h2>
                 <p class="text-gray-400">The squads assembled for the ultimate glory.</p>
             </div>
-            <div id="rostersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 section-fade"></div>
-            <div id="coordinatorsSection" class="mt-20 flex flex-col md:flex-row justify-center items-center gap-12 section-fade" data-aos="fade-up"></div>
-        </div>
-    </section>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- RW Champions Roster -->
+                <div class="glass p-8 border-t-4 border-brand-blue flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="text-xl font-bold mb-6 text-brand-blue uppercase tracking-widest">RW Champions</h5>
+                    <ul class="space-y-4 text-sm flex-grow">
+                        <li class="flex justify-between items-center pb-2 border-b border-white/5">
+                            <span class="font-bold">Pankaj Negi</span>
+                            <span class="text-[10px] bg-brand-blue text-black px-2 py-0.5 rounded font-black">CAPTAIN</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2 border-b border-white/5 text-gray-300">
+                            <span>Sajeed Ansari (VC)</span>
+                            <span class="text-[10px] text-brand-blue font-bold">70 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Deepak Kumar</span>
+                            <span class="text-[10px]">15 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Himanshu Tyagi</span>
+                            <span class="text-[10px]">5 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Khushi</span>
+                            <span class="text-[10px]">5 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Sameer</span>
+                            <span class="text-[10px]">5 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-500 italic">
+                            <span>Misam Zaidi</span>
+                            <span class="text-[10px]">BASE</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-500 italic">
+                            <span>Ayush Jain</span>
+                            <span class="text-[10px]">BASE</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-4 border-t border-white/10 text-center">
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Purse Remaining</div>
+                        <div class="text-xl font-black text-brand-blue">0 / 100</div>
+                    </div>
+                </div>
 
+                <!-- Qube Super Kings Roster -->
+                <div class="glass p-8 border-t-4 border-brand-green flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="text-xl font-bold mb-6 text-brand-green uppercase tracking-widest">Qube Super Kings</h5>
+                    <ul class="space-y-4 text-sm flex-grow">
+                        <li class="flex justify-between items-center pb-2 border-b border-white/5">
+                            <span class="font-bold">Ayush Nath Tiwari</span>
+                            <span class="text-[10px] bg-brand-green text-black px-2 py-0.5 rounded font-black">CAPTAIN</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2 border-b border-white/5 text-gray-300">
+                            <span>M. Mustafa Khan (VC)</span>
+                            <span class="text-[10px] text-brand-green font-bold">30 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Mayukh</span>
+                            <span class="text-[10px]">30 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Ritik Singh</span>
+                            <span class="text-[10px]">30 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Rohit Maheshwari</span>
+                            <span class="text-[10px]">5 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Aitrayiee Konar</span>
+                            <span class="text-[10px]">5 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-500 italic">
+                            <span>Dattatreya Roy</span>
+                            <span class="text-[10px]">BASE</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-4 border-t border-white/10 text-center">
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Purse Remaining</div>
+                        <div class="text-xl font-black text-brand-green">0 / 100</div>
+                    </div>
+                </div>
+
+                <!-- Ball Destroyers Roster -->
+                <div class="glass p-8 border-t-4 border-brand-blue flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                    <h5 class="text-xl font-bold mb-6 text-brand-blue uppercase tracking-widest">Ball Destroyers</h5>
+                    <ul class="space-y-4 text-sm flex-grow">
+                        <li class="flex justify-between items-center pb-2 border-b border-white/5">
+                            <span class="font-bold">Yashraj Jaiswal</span>
+                            <span class="text-[10px] bg-brand-blue text-black px-2 py-0.5 rounded font-black">CAPTAIN</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2 border-b border-white/5 text-gray-300">
+                            <span>Pankaj Garg (VC)</span>
+                            <span class="text-[10px] text-brand-blue font-bold">35 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Archit Singh</span>
+                            <span class="text-[10px]">20 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Varun</span>
+                            <span class="text-[10px]">15 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Yash Singhal</span>
+                            <span class="text-[10px]">5 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Haniya</span>
+                            <span class="text-[10px]">5 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Saurabh Singh Sir</span>
+                            <span class="text-[10px]">BASE</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-500 italic">
+                            <span>Chitra Vasu</span>
+                            <span class="text-[10px]">BASE</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-4 border-t border-white/10 text-center">
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Purse Remaining</div>
+                        <div class="text-xl font-black text-brand-blue">20 / 100</div>
+                    </div>
+                </div>
+
+                <!-- WFH Warriors Roster -->
+                <div class="glass p-8 border-t-4 border-brand-green flex flex-col h-full" data-aos="fade-up" data-aos-delay="400">
+                    <h5 class="text-xl font-bold mb-6 text-brand-green uppercase tracking-widest">WFH Warriors</h5>
+                    <ul class="space-y-4 text-sm flex-grow">
+                        <li class="flex justify-between items-center pb-2 border-b border-white/5">
+                            <span class="font-bold">Shubham Jha</span>
+                            <span class="text-[10px] bg-brand-green text-black px-2 py-0.5 rounded font-black">CAPTAIN</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2 border-b border-white/5 text-gray-300">
+                            <span>Gaurav Kumar (VC)</span>
+                            <span class="text-[10px] text-brand-green font-bold">35 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Kuldeep Baid</span>
+                            <span class="text-[10px]">25 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Deepesh Gautam</span>
+                            <span class="text-[10px]">15 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Mansi Thakur</span>
+                            <span class="text-[10px]">10 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-400">
+                            <span>Priyansh</span>
+                            <span class="text-[10px]">5 PTS</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-500 italic">
+                            <span>Sparsh Khandelwal</span>
+                            <span class="text-[10px]">BASE</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-4 border-t border-white/10 text-center">
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Purse Remaining</div>
+                        <div class="text-xl font-black text-brand-green">10 / 100</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Co-ordinators -->
+            <div class="mt-20 flex flex-col md:flex-row justify-center items-center gap-12" data-aos="fade-up">
+                <div class="text-center">
+                    <h6 class="text-gray-500 uppercase tracking-widest text-xs font-bold mb-4">League Co-ordinator</h6>
+                    <p class="text-2xl font-black text-brand-blue">Nandini</p>
+                </div>
+                <div class="h-10 w-px bg-white/10 hidden md:block"></div>
+                <div class="text-center">
+                    <h6 class="text-gray-500 uppercase tracking-widest text-xs font-bold mb-4">League Co-ordinator</h6>
+                    <p class="text-2xl font-black text-brand-green">Chitrangada</p>
+                </div>
+                <div class="h-10 w-px bg-white/10 hidden md:block"></div>
+                <div class="text-center">
+                    <h6 class="text-gray-500 uppercase tracking-widest text-xs font-bold mb-4">League Co-ordinator</h6>
+                    <p class="text-2xl font-black text-brand-blue">Vartika</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="details" class="py-32 px-6 relative">
         <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-green/5 rounded-full blur-[150px]"></div>
@@ -295,7 +502,7 @@
                 <p class="text-gray-400">Lock the dates. Noida is the arena.</p>
             </div>
 
-            <div id="eventDetailsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 section-fade">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Location -->
                 <div class="glass p-8 group hover:border-brand-blue/50 transition-all" data-aos="flip-left" data-aos-delay="100">
                     <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -348,7 +555,7 @@
             </div>
 
             <!-- Stats Bar -->
-            <div id="statsBar" class="mt-12 glass p-6 md:p-10 flex flex-wrap justify-around items-center gap-8 border-brand-blue/20 section-fade" data-aos="zoom-in">
+            <div class="mt-12 glass p-6 md:p-10 flex flex-wrap justify-around items-center gap-8 border-brand-blue/20" data-aos="zoom-in">
                 <div class="text-center">
                     <div class="text-4xl font-extrabold text-brand-blue">04</div>
                     <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Teams</div>
@@ -533,353 +740,22 @@
     </footer>
 
     <script>
-        // ═══════════════════════════════════════════
-        //  RPL MULTI-LOCATION DATA STORE
-        // ═══════════════════════════════════════════
-        const RPL_DATA = {
-          noida: {
-            editionLabel: 'Noida Edition',
-            heroSubtitle: 'Noida Office Turf Cricket League',
-            captains: [
-              { initials:'PN', name:'Pankaj Negi',       team:'RW Champions',    color:'blue' },
-              { initials:'AT', name:'Ayush Nath Tiwari', team:'Qube Super Kings', color:'green' },
-              { initials:'YJ', name:'Yashraj Jaiswal',   team:'Ball Destroyers', color:'blue' },
-              { initials:'SJ', name:'Shubham Jha',       team:'WFH Warriors',    color:'green' }
-            ],
-            teams: [
-              {
-                name:'RW Champions', color:'blue',
-                players:[
-                  { name:'Pankaj Negi',    role:'CAPTAIN', pts:null },
-                  { name:'Sajeed Ansari',  role:'VC',      pts:70 },
-                  { name:'Deepak Kumar',   role:null,      pts:15 },
-                  { name:'Himanshu Tyagi', role:null,      pts:5  },
-                  { name:'Khushi',         role:null,      pts:5  },
-                  { name:'Sameer',         role:null,      pts:5  },
-                  { name:'Misam Zaidi',    role:null,      pts:'BASE' },
-                  { name:'Ayush Jain',     role:null,      pts:'BASE' }
-                ],
-                purse:'0 / 100'
-              },
-              {
-                name:'Qube Super Kings', color:'green',
-                players:[
-                  { name:'Ayush Nath Tiwari', role:'CAPTAIN', pts:null },
-                  { name:'M. Mustafa Khan',   role:'VC',      pts:30 },
-                  { name:'Mayukh',            role:null,      pts:30 },
-                  { name:'Ritik Singh',       role:null,      pts:30 },
-                  { name:'Rohit Maheshwari',  role:null,      pts:5  },
-                  { name:'Aitrayiee Konar',   role:null,      pts:5  },
-                  { name:'Dattatreya Roy',    role:null,      pts:'BASE' }
-                ],
-                purse:'0 / 100'
-              },
-              {
-                name:'Ball Destroyers', color:'blue',
-                players:[
-                  { name:'Yashraj Jaiswal', role:'CAPTAIN', pts:null },
-                  { name:'Pankaj Garg',     role:'VC',      pts:35 },
-                  { name:'Archit Singh',    role:null,      pts:20 },
-                  { name:'Varun',           role:null,      pts:15 },
-                  { name:'Yash Singhal',    role:null,      pts:5  },
-                  { name:'Haniya',          role:null,      pts:5  },
-                  { name:'Saurabh Singh Sir', role:null,    pts:'BASE' },
-                  { name:'Chitra Vasu',     role:null,      pts:'BASE' }
-                ],
-                purse:'20 / 100'
-              },
-              {
-                name:'WFH Warriors', color:'green',
-                players:[
-                  { name:'Shubham Jha',     role:'CAPTAIN', pts:null },
-                  { name:'Gaurav Kumar',    role:'VC',      pts:35 },
-                  { name:'Kuldeep Baid',    role:null,      pts:25 },
-                  { name:'Deepesh Gautam',  role:null,      pts:15 },
-                  { name:'Mansi Thakur',    role:null,      pts:10 },
-                  { name:'Priyansh',        role:null,      pts:5  },
-                  { name:'Sparsh Khandelwal', role:null,    pts:'BASE' }
-                ],
-                purse:'10 / 100'
-              }
-            ],
-            coordinators: [
-              { name:'Nandini',    color:'blue'  },
-              { name:'Chitrangada', color:'green' },
-              { name:'Vartika',   color:'blue'  }
-            ],
-            eventDetails: {
-              location:  { title:'Location',   sub:'Noida Turf, Sector-62', note:'The Scotish School Turf', tag:'The Arena',    color:'blue'  },
-              format:    { title:'Format',     sub:'League + Mega Auction', note:'',                        tag:'Professional', color:'green' },
-              auction:   { title:'Auction Day', sub:'Thursday 2-4 PM',      note:'',                        tag:'Strategy',     color:'blue'  },
-              matchDay:  { title:'Match Day',   sub:'Saturday at 9 AM',     note:'',                        tag:'Showtime',     color:'green' }
-            },
-            stats: { teams:4, players:29, coordinators:3, champion:1 }
-          },
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
 
-          mumbai: {
-            editionLabel: 'Mumbai Edition',
-            heroSubtitle: 'Mumbai Office Turf Cricket League',
-            captains: [
-              { initials:'N',  name:'Nimish', team:'RW Mavericks',      color:'blue'  },
-              { initials:'G',  name:'Gill',   team:'Dark Stallions',     color:'green' },
-              { initials:'S',  name:'Singh',  team:'Researchwire Elites', color:'blue'  }
-            ],
-            teams: [
-              {
-                name:'Dark Stallions', color:'green',
-                players:[
-                  { name:'Gill',    role:'CAPTAIN', pts:null },
-                  { name:'AM',      role:null,      pts:700  },
-                  { name:'Vijay',   role:null,      pts:1600 },
-                  { name:'Piyush',  role:null,      pts:2400 },
-                  { name:'Kshitij', role:null,      pts:700  },
-                  { name:'Jash',    role:null,      pts:2400 },
-                  { name:'Suraj',   role:null,      pts:1800 },
-                  { name:'Anjali',  role:null,      pts:200  },
-                  { name:'Girish',  role:null,      pts:200  }
-                ],
-                purse:'2000 / 12000',
-                walletInfo:'Total Spent: ₹10,000'
-              },
-              {
-                name:'Researchwire Elites', color:'blue',
-                players:[
-                  { name:'Singh',   role:'CAPTAIN', pts:null },
-                  { name:'Santosh', role:null,      pts:400  },
-                  { name:'Sameer',  role:null,      pts:2200 },
-                  { name:'Siddhi',  role:null,      pts:300  },
-                  { name:'Nikhil',  role:null,      pts:2200 },
-                  { name:'Rangrez', role:null,      pts:2400 },
-                  { name:'Vinayak', role:null,      pts:500  },
-                  { name:'Shiv',    role:null,      pts:200  },
-                  { name:'Sandesh', role:null,      pts:200  }
-                ],
-                purse:'3600 / 12000',
-                walletInfo:'Total Spent: ₹8,400'
-              },
-              {
-                name:'RW Mavericks', color:'blue',
-                players:[
-                  { name:'Nimish',  role:'CAPTAIN', pts:null },
-                  { name:'Anand',   role:null,      pts:900  },
-                  { name:'Prasad',  role:null,      pts:2400 },
-                  { name:'Keni',    role:null,      pts:2400 },
-                  { name:'Saarthik',role:null,      pts:900  },
-                  { name:'Mane',    role:null,      pts:1400 },
-                  { name:'Kalpesh', role:null,      pts:500  },
-                  { name:'Khushi',  role:null,      pts:400  },
-                  { name:'Saptesh', role:null,      pts:2000 }
-                ],
-                purse:'1100 / 12000',
-                walletInfo:'Total Spent: ₹10,900'
-              }
-            ],
-            coordinators: [],
-            eventDetails: {
-              location: { title:'Location', sub:'Mumbai Office Turf', note:'', tag:'The Arena', color:'blue' },
-              format:   { title:'Format',   sub:'League + Mega Auction', note:'', tag:'Professional', color:'green' },
-              auction:  { title:'Wallet Size', sub:'₹12,000 (10k + 2k bonus)', note:'', tag:'Budget', color:'blue' },
-              matchDay: { title:'Match Day', sub:'TBD', note:'', tag:'Coming Soon', color:'green' }
-            },
-            stats: { teams:3, players:27, coordinators:0, champion:1 }
-          }
-        };
-
-        // ═══════════════════════════════════════════
-        //  RENDER FUNCTIONS
-        // ═══════════════════════════════════════════
-        const colors = {
-          blue:  { bg:'bg-brand-blue',  text:'text-brand-blue',  border:'border-brand-blue',  textMuted:'text-brand-blue/80' },
-          green: { bg:'bg-brand-green', text:'text-brand-green', border:'border-brand-green', textMuted:'text-brand-green/80' }
-        };
-
-        function renderCaptains(captains) {
-          const grid = document.getElementById('captainsGrid');
-          const delays = [100, 200, 300, 400];
-          grid.innerHTML = captains.map((c, i) => {
-            const col = colors[c.color];
-            return `
-            <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="${delays[i] || 100}">
-              <div class="relative w-32 h-32 mx-auto mb-6">
-                <div class="absolute inset-0 rounded-full border-2 ${col.border} border-dashed animate-[spin_10s_linear_infinite]"></div>
-                <div class="w-full h-full rounded-full bg-gradient-to-br from-${c.color === 'blue' ? 'brand-blue' : 'brand-green'}/20 to-brand-dark overflow-hidden p-1">
-                  <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">${c.initials}</div>
-                </div>
-                <div class="absolute -bottom-2 -right-2 ${col.bg} text-black p-2 rounded-full shadow-lg">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
-                </div>
-              </div>
-              <h4 class="text-2xl font-bold mb-1">${c.name}</h4>
-              <p class="${col.text} text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
-              <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs ${col.textMuted} font-bold uppercase tracking-widest">"${c.team}"</div>
-            </div>`;
-          }).join('');
-        }
-
-        function renderRosters(teams, currency) {
-          const grid = document.getElementById('rostersGrid');
-          const delays = [100, 200, 300, 400];
-          grid.innerHTML = teams.map((team, i) => {
-            const col = colors[team.color];
-            const playerItems = team.players.map(p => {
-              if (p.role === 'CAPTAIN') {
-                return `<li class="flex justify-between items-center pb-2 border-b border-white/5"><span class="font-bold">${p.name}</span><span class="text-[10px] ${col.bg} text-black px-2 py-0.5 rounded font-black">CAPTAIN</span></li>`;
-              } else if (p.role === 'VC') {
-                return `<li class="flex justify-between items-center pb-2 border-b border-white/5 text-gray-300"><span>${p.name} (VC)</span><span class="text-[10px] ${col.text} font-bold">${p.pts !== null ? p.pts + (currency||' PTS') : ''}</span></li>`;
-              } else if (p.pts === 'BASE') {
-                return `<li class="flex justify-between items-center text-gray-500 italic"><span>${p.name}</span><span class="text-[10px]">BASE</span></li>`;
-              } else {
-                return `<li class="flex justify-between items-center text-gray-400"><span>${p.name}</span><span class="text-[10px]">${p.pts !== null ? p.pts + (currency||' PTS') : ''}</span></li>`;
-              }
-            }).join('');
-            return `
-            <div class="glass p-8 border-t-4 ${col.border} flex flex-col h-full" data-aos="fade-up" data-aos-delay="${delays[i] || 100}">
-              <h5 class="text-xl font-bold mb-6 ${col.text} uppercase tracking-widest">${team.name}</h5>
-              <ul class="space-y-4 text-sm flex-grow">${playerItems}</ul>
-              ${team.walletInfo ? `<div class="mt-3 text-[10px] text-gray-500 italic text-center">${team.walletInfo}</div>` : ''}
-              <div class="mt-8 pt-4 border-t border-white/10 text-center">
-                <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Purse Remaining</div>
-                <div class="text-xl font-black ${col.text}">${team.purse}</div>
-              </div>
-            </div>`;
-          }).join('');
-        }
-
-        function renderCoordinators(coordinators) {
-          const section = document.getElementById('coordinatorsSection');
-          if (!coordinators || !coordinators.length) {
-            section.style.display = 'none';
-            return;
-          }
-          section.style.display = '';
-          section.innerHTML = coordinators.map((c, i) => {
-            const col = colors[c.color];
-            const divider = i < coordinators.length - 1 ? '<div class="h-10 w-px bg-white/10 hidden md:block"></div>' : '';
-            return `
-            <div class="text-center">
-              <h6 class="text-gray-500 uppercase tracking-widest text-xs font-bold mb-4">League Co-ordinator</h6>
-              <p class="text-2xl font-black ${col.text}">${c.name}</p>
-            </div>${divider}`;
-          }).join('');
-        }
-
-        function renderEventDetails(eventDetails) {
-          const cards = Object.values(eventDetails);
-          const grid = document.getElementById('eventDetailsGrid');
-          if (!grid) return;
-          const delays = [100, 200, 300, 400];
-          const icons = [
-            `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>`,
-            `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>`,
-            `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>`,
-            `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>`
-          ];
-          grid.innerHTML = cards.map((card, i) => {
-            const col = colors[card.color];
-            return `
-            <div class="glass p-8 group hover:${col.border}/50 transition-all" data-aos="flip-left" data-aos-delay="${delays[i]}">
-              <div class="w-12 h-12 bg-${card.color === 'blue' ? 'brand-blue' : 'brand-green'}/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 ${col.text}" fill="none" stroke="currentColor" viewBox="0 0 24 24">${icons[i]}</svg>
-              </div>
-              <h5 class="text-xl font-bold mb-2">${card.title}</h5>
-              <p class="text-gray-400 text-sm">${card.sub}</p>
-              ${card.note ? `<p class="text-xs ${col.text}/60 mb-2">${card.note}</p>` : ''}
-              <p class="${col.text} text-xs mt-4 font-bold tracking-widest uppercase">${card.tag}</p>
-            </div>`;
-          }).join('');
-        }
-
-        function renderStats(stats) {
-          const el = document.getElementById('statsBar');
-          if (!el) return;
-          el.innerHTML = [
-            { val: String(stats.teams).padStart(2,'0'),        label:'Teams',        color:'text-brand-blue' },
-            { val: stats.players,                              label:'Players',      color:'text-white' },
-            { val: String(stats.coordinators).padStart(2,'0'), label:'Coordinators', color:'text-brand-blue' },
-            { val: String(stats.champion).padStart(2,'0'),     label:'Champion',     color:'text-brand-green' }
-          ].map((s, i) => `
-            ${i > 0 ? '<div class="h-10 w-px bg-white/10 hidden md:block"></div>' : ''}
-            <div class="text-center"><div class="text-4xl font-extrabold ${s.color}">${s.val}</div><div class="text-xs text-gray-400 uppercase tracking-widest mt-1">${s.label}</div></div>
-          `).join('');
-        }
-
-        // ═══════════════════════════════════════════
-        //  MAIN SWITCH FUNCTION
-        // ═══════════════════════════════════════════
-        const FADE_TARGETS = ['captainsGrid','rostersGrid','coordinatorsSection','eventDetailsGrid','statsBar'];
-
-        function switchLocation(loc) {
-          const data = RPL_DATA[loc];
-          if (!data) return;
-
-          // Currency label
-          const currency = loc === 'mumbai' ? '' : ' PTS';
-
-          // Fade out
-          FADE_TARGETS.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.classList.add('fading');
-          });
-
-          // Also fade captains/rosters sections
-          const captainSection = document.getElementById('captains');
-          const rostersSection = document.getElementById('rosters');
-
-          setTimeout(() => {
-            // Hero
-            document.getElementById('heroSubtitle').textContent = data.heroSubtitle;
-            document.getElementById('editionBadge').textContent = data.editionLabel;
-
-            // Show/hide captains section
-            if (data.captains && data.captains.length) {
-              captainSection.style.display = '';
-              renderCaptains(data.captains);
-            } else {
-              captainSection.style.display = 'none';
-            }
-
-            // Show/hide rosters section
-            if (data.teams && data.teams.length) {
-              rostersSection.style.display = '';
-              renderRosters(data.teams, currency);
-            } else {
-              rostersSection.style.display = 'none';
-            }
-
-            renderCoordinators(data.coordinators);
-            renderEventDetails(data.eventDetails);
-            renderStats(data.stats);
-
-            // Fade in
-            FADE_TARGETS.forEach(id => {
-              const el = document.getElementById(id);
-              if (el) el.classList.remove('fading');
-            });
-          }, 350);
-        }
-
-        // ═══════════════════════════════════════════
-        //  INIT
-        // ═══════════════════════════════════════════
-        AOS.init({ duration: 1000, once: true, offset: 100 });
-
-        // Smooth scroll
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-          });
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-
-        // Location dropdown
-        document.getElementById('locationSelect').addEventListener('change', function() {
-          switchLocation(this.value);
-        });
-
-        // Load Noida by default
-        switchLocation('noida');
     </script>
 </body>
 </html>
-< ! - -   B u i l d   T r i g g e r :   0 4 / 0 8 / 2 0 2 6   1 6 : 2 1 : 3 0   - - >  
- 
