@@ -177,17 +177,17 @@
     <section id="hero" class="relative h-screen flex items-center justify-center stadium-bg">
         <div class="absolute inset-0 hero-gradient"></div>
         
-        <div class="relative z-10 text-center px-6 max-w-4xl" data-aos="zoom-out" data-aos-duration="1500">
-            <div class="mb-8 inline-block py-1.5 px-5 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-bold tracking-[0.2em] uppercase">
+        <div class="relative z-10 text-center px-6 max-w-4xl pt-16" data-aos="zoom-out" data-aos-duration="1500">
+            <div class="mb-10 inline-block py-1.5 px-6 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-bold tracking-[0.2em] uppercase">
                 Now Live • 2026
             </div>
-            <h1 class="text-5xl md:text-8xl font-extrabold mb-4 tracking-tight leading-none">
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-4 tracking-tight leading-none">
                 Researchwire <br> 
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-green neon-text-blue">Premier League</span>
             </h1>
             <p class="text-xl md:text-2xl font-light text-gray-400 mb-8 max-w-2xl mx-auto">
                 The ultimate arena where innovation, strategy, and sportsmanship collide. <br>
-                <span class="text-white font-bold">Two Cities. Two Leagues.</span>
+                <span class="text-white font-bold tracking-wider">Two Cities. Two Leagues.</span>
             </p>
 
             <!-- City Switcher -->
@@ -240,143 +240,104 @@
     <!-- CAPTAINS SECTION -->
     <section id="captains" class="py-32 px-6 bg-[#0c0c0e]">
         <div class="container mx-auto max-w-6xl">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-                <div data-aos="fade-right">
-                    <h2 class="text-5xl md:text-6xl font-black mb-4">Team <span class="text-brand-blue active-city-label">Noida</span> <span class="text-brand-green">Captains</span></h2>
-                    <p class="text-gray-400 text-lg">Elite strategic leaders chosen to command their squads.</p>
-                </div>
-                <div class="h-1 lg:w-1/3 bg-gradient-to-r from-brand-blue to-transparent rounded-full mb-4 hidden md:block"></div>
-            </div>
-
-            <!-- NOIDA CAPTAINS CONTENT -->
-            <div id="noida-captains" class="city-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Captain 1: RW Champions -->
-                <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative w-32 h-32 mx-auto mb-6">
-                        <div class="absolute inset-0 rounded-full border-2 border-brand-blue border-dashed animate-[spin_10s_linear_infinite]"></div>
-                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-dark overflow-hidden p-1">
-                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">PN</div>
-                        </div>
-                        <div class="absolute -bottom-2 -right-2 bg-brand-blue text-black p-2 rounded-full shadow-lg">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
-                        </div>
-                    </div>
-                    <h4 class="text-2xl font-bold mb-1">Pankaj Negi</h4>
-                    <p class="text-brand-blue text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
-                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-blue/80 font-bold uppercase tracking-widest">
-                        "RW Champions"
+            <!-- NOIDA CAPTAINS VIEW -->
+            <div id="noida-captains-view" class="city-view">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4" data-aos="fade-right">
+                    <div class="max-w-xl">
+                        <h2 class="text-5xl md:text-6xl font-black mb-4 uppercase tracking-tighter">Team <span class="text-brand-blue">Noida</span> <span class="text-brand-green">Captains</span></h2>
+                        <p class="text-gray-400 text-lg font-medium">Elite strategic leaders chosen to command the Noida arena.</p>
                     </div>
                 </div>
-
-                <!-- Captain 2: Qube Super Kings -->
-                <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative w-32 h-32 mx-auto mb-6">
-                        <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_10s_linear_infinite]"></div>
-                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
-                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">AT</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Captain 1 -->
+                    <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full border-2 border-brand-blue border-dashed animate-[spin_10s_linear_infinite]"></div>
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-dark overflow-hidden p-1">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">PN</div>
+                            </div>
                         </div>
-                        <div class="absolute -bottom-2 -right-2 bg-brand-green text-black p-2 rounded-full shadow-lg">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
-                        </div>
+                        <h4 class="text-2xl font-bold mb-1">Pankaj Negi</h4>
+                        <p class="text-brand-blue text-sm font-bold tracking-widest uppercase">Team Captain</p>
                     </div>
-                    <h4 class="text-2xl font-bold mb-1">Ayush Nath Tiwari</h4>
-                    <p class="text-brand-green text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
-                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-green/80 font-bold uppercase tracking-widest">
-                        "Qube Super Kings"
-                    </div>
-                </div>
-
-                <!-- Captain 3: Ball Destroyers -->
-                <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative w-32 h-32 mx-auto mb-6">
-                        <div class="absolute inset-0 rounded-full border-2 border-brand-blue border-dashed animate-[spin_15s_linear_infinite]"></div>
-                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-dark overflow-hidden p-1">
-                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">YJ</div>
+                    <!-- Captain 2 -->
+                    <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_10s_linear_infinite]"></div>
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">AT</div>
+                            </div>
                         </div>
-                        <div class="absolute -bottom-2 -right-2 bg-brand-blue text-black p-2 rounded-full shadow-lg">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
-                        </div>
+                        <h4 class="text-2xl font-bold mb-1">Ayush Nath Tiwari</h4>
+                        <p class="text-brand-green text-sm font-bold tracking-widest uppercase">Team Captain</p>
                     </div>
-                    <h4 class="text-2xl font-bold mb-1">Yashraj Jaiswal</h4>
-                    <p class="text-brand-blue text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
-                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-blue/80 font-bold uppercase tracking-widest">
-                        "Ball Destroyers"
-                    </div>
-                </div>
-
-                <!-- Captain 4: WFH Warriors -->
-                <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="relative w-32 h-32 mx-auto mb-6">
-                        <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_15s_linear_infinite]"></div>
-                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
-                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">SJ</div>
+                    <!-- Captain 3 -->
+                    <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full border-2 border-brand-blue border-dashed animate-[spin_15s_linear_infinite]"></div>
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-dark overflow-hidden p-1">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">YJ</div>
+                            </div>
                         </div>
-                        <div class="absolute -bottom-2 -right-2 bg-brand-green text-black p-2 rounded-full shadow-lg">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
-                        </div>
+                        <h4 class="text-2xl font-bold mb-1">Yashraj Jaiswal</h4>
+                        <p class="text-brand-blue text-sm font-bold tracking-widest uppercase">Team Captain</p>
                     </div>
-                    <h4 class="text-2xl font-bold mb-1">Shubham Jha</h4>
-                    <p class="text-brand-green text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
-                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-green/80 font-bold uppercase tracking-widest">
-                        "WFH Warriors"
+                    <!-- Captain 4 -->
+                    <div class="captain-card glass p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_15s_linear_infinite]"></div>
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">SJ</div>
+                            </div>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-1">Shubham Jha</h4>
+                        <p class="text-brand-green text-sm font-bold tracking-widest uppercase">Team Captain</p>
                     </div>
                 </div>
             </div>
 
-            <!-- MUMBAI CAPTAINS CONTENT -->
-            <!-- MUMBAI CAPTAINS CONTENT -->
-            <div id="mumbai-captains" class="city-content city-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto justify-items-center">
-                <!-- Mumbai Captain 1: RW Mavericks -->
-                <div class="captain-card glass p-8 text-center">
-                    <div class="relative w-32 h-32 mx-auto mb-6">
-                        <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_10s_linear_infinite]"></div>
-                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
-                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">NM</div>
-                        </div>
-                        <div class="absolute -bottom-2 -right-2 bg-brand-green text-black p-2 rounded-full shadow-lg">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
-                        </div>
-                    </div>
-                    <h4 class="text-2xl font-bold mb-1">Nimish</h4>
-                    <p class="text-brand-green text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
-                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-green/80 font-bold uppercase tracking-widest">
-                        "RW Mavericks"
+            <!-- MUMBAI CAPTAINS VIEW -->
+            <!-- MUMBAI CAPTAINS VIEW -->
+            <div id="mumbai-captains-view" class="city-view city-hidden">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                    <div class="max-w-xl">
+                        <h2 class="text-5xl md:text-6xl font-black mb-4 uppercase tracking-tighter">Team <span class="text-brand-blue">Mumbai</span> <span class="text-brand-green">Captains</span></h2>
+                        <p class="text-gray-400 text-lg font-medium">Elite strategic leaders chosen to command the Mumbai arena.</p>
                     </div>
                 </div>
-
-                <!-- Mumbai Captain 2: Dark Stallions -->
-                <div class="captain-card glass p-8 text-center">
-                    <div class="relative w-32 h-32 mx-auto mb-6">
-                        <div class="absolute inset-0 rounded-full border-2 border-brand-blue border-dashed animate-[spin_10s_linear_infinite]"></div>
-                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-dark overflow-hidden p-1">
-                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">GL</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+                    <!-- Mumbai Captain 1 -->
+                    <div class="captain-card glass p-8 text-center w-full">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_10s_linear_infinite]"></div>
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">NM</div>
+                            </div>
                         </div>
-                        <div class="absolute -bottom-2 -right-2 bg-brand-blue text-black p-2 rounded-full shadow-lg">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
-                        </div>
+                        <h4 class="text-2xl font-bold mb-1">Nimish</h4>
+                        <p class="text-brand-green text-sm font-bold tracking-widest uppercase mb-4">RW Mavericks</p>
                     </div>
-                    <h4 class="text-2xl font-bold mb-1">Gill</h4>
-                    <p class="text-brand-blue text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
-                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-blue/80 font-bold uppercase tracking-widest">
-                        "Dark Stallions"
-                    </div>
-                </div>
-
-                <!-- Mumbai Captain 3: Researchwire Elites -->
-                <div class="captain-card glass p-8 text-center">
-                    <div class="relative w-32 h-32 mx-auto mb-6">
-                        <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_15s_linear_infinite]"></div>
-                        <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
-                            <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">SN</div>
+                    <!-- Captain 2 -->
+                    <div class="captain-card glass p-8 text-center w-full">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full border-2 border-brand-blue border-dashed animate-[spin_10s_linear_infinite]"></div>
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-dark overflow-hidden p-1">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">GL</div>
+                            </div>
                         </div>
-                        <div class="absolute -bottom-2 -right-2 bg-brand-green text-black p-2 rounded-full shadow-lg">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z"></path></svg>
-                        </div>
+                        <h4 class="text-2xl font-bold mb-1">Gill</h4>
+                        <p class="text-brand-blue text-sm font-bold tracking-widest uppercase mb-4">Dark Stallions</p>
                     </div>
-                    <h4 class="text-2xl font-bold mb-1">Singh</h4>
-                    <p class="text-brand-green text-sm font-bold tracking-widest uppercase mb-4">Team Captain</p>
-                    <div class="py-2 px-4 rounded-lg bg-white/5 border border-white/10 text-xs text-brand-green/80 font-bold uppercase tracking-widest">
-                        "Researchwire Elites"
+                    <!-- Captain 3 -->
+                    <div class="captain-card glass p-8 text-center w-full">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 rounded-full border-2 border-brand-green border-dashed animate-[spin_15s_linear_infinite]"></div>
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-green/20 to-brand-dark overflow-hidden p-1">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-4xl font-bold text-gray-700">SN</div>
+                            </div>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-1">Singh</h4>
+                        <p class="text-brand-green text-sm font-bold tracking-widest uppercase mb-4">Researchwire Elites</p>
                     </div>
                 </div>
             </div>
@@ -385,11 +346,14 @@
 
     <!-- EVENT DETAILS SECTION -->
     <!-- TEAM ROSTERS SECTION -->
-    <section id="rosters" class="py-24 px-6 bg-[#0a0a0c] relative">
-        <div class="container mx-auto max-w-6xl"            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Team <span class="text-brand-green">Rosters</span></h2>
-                <p class="text-gray-400 active-city-label">Noida squads assembled for the ultimate glory.</p>
-            </div>
+    <section id="rosters" class="py-32 px-6 bg-[#0a0a0c] relative border-t border-white/5">
+        <div class="container mx-auto max-w-6xl">
+            <!-- NOIDA ROSTERS VIEW -->
+            <div id="noida-rosters-view" class="city-view">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-5xl font-extrabold mb-4 uppercase tracking-tighter">Team <span class="text-brand-green">Rosters</span></h2>
+                    <p class="text-gray-400 font-medium">Noida squads assembled for the ultimate glory.</p>
+                </div>
 
             <!-- NOIDA ROSTERS CONTENT -->
             <div id="noida-rosters" class="city-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -558,9 +522,16 @@
                 </div>
             </div>
 
-            <!-- MUMBAI ROSTERS CONTENT -->
-            <!-- MUMBAI ROSTERS CONTENT -->
-            <div id="mumbai-rosters" class="city-content city-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto justify-center">
+            </div>
+
+            <!-- MUMBAI ROSTERS VIEW -->
+            <div id="mumbai-rosters-view" class="city-view city-hidden">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-extrabold mb-4 uppercase tracking-tighter">Team <span class="text-brand-green">Rosters</span></h2>
+                    <p class="text-gray-400 font-medium">Mumbai squads assembled for the ultimate glory.</p>
+                </div>
+                <!-- MUMBAI ROSTERS CONTENT -->
+                <div id="mumbai-rosters" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto justify-center">
                 <!-- RW Mavericks Roster -->
                 <div class="glass p-8 border-t-4 border-brand-green flex flex-col h-full">
                     <h5 class="text-xl font-bold mb-6 text-brand-green uppercase tracking-widest">RW Mavericks</h5>
@@ -915,24 +886,24 @@
             document.getElementById('btn-' + city).classList.add('active-city-btn');
             document.getElementById('btn-' + city).classList.remove('text-gray-400');
 
-            // Update content visibility
-            document.querySelectorAll('.city-content').forEach(section => {
-                section.classList.add('city-hidden');
+            // Toggle high-level view containers
+            document.querySelectorAll('.city-view').forEach(view => {
+                view.classList.add('city-hidden');
             });
-            document.getElementById(city + '-captains').classList.remove('city-hidden');
-            document.getElementById(city + '-rosters').classList.remove('city-hidden');
+            document.getElementById(city + '-captains-view').classList.remove('city-hidden');
+            document.getElementById(city + '-rosters-view').classList.remove('city-hidden');
             
             // Hide/Show Noida-only sections
-            const noidaSections = document.querySelectorAll('.noida-only');
-            noidaSections.forEach(section => {
+            const noidaOnlyElements = document.querySelectorAll('.noida-only');
+            noidaOnlyElements.forEach(el => {
                 if (city === 'mumbai') {
-                    section.classList.add('city-hidden');
+                    el.classList.add('city-hidden');
                 } else {
-                    section.classList.remove('city-hidden');
+                    el.classList.remove('city-hidden');
                 }
             });
 
-            // Update labels
+            // Update Labels
             document.querySelectorAll('.active-city-label').forEach(label => {
                 label.innerText = city.charAt(0).toUpperCase() + city.slice(1);
             });
@@ -945,7 +916,7 @@
             document.getElementById('stat-teams').innerText = stats[city].teams;
             document.getElementById('stat-players').innerText = stats[city].players;
 
-            // Re-trigger AOS
+            // Re-trigger AOS to recalculate positions correctly
             AOS.refresh();
         }
 
